@@ -11,10 +11,6 @@ def extract_cmd_arguments():
     #build parser object
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        'weight_path', type=str,
-        help='path dir containing weights of network',
-    )
-    parser.add_argument(
         '--samples', type=int, default=1,
         help='number of samples to draw',
     )
@@ -25,7 +21,7 @@ def main():
     #parse cmd args and load model weights
     args = extract_cmd_arguments()
     model = M.GAN(**config.cfg)
-    model.load(args['weight_path'])
+    model.load()
     #get device
     device_str = 'cuda:0' if torch.cuda.is_available() else 'cpu'
     device = torch.device(device_str)
