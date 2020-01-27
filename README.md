@@ -1,5 +1,4 @@
-#MNIST Gan
-
+# MNIST Gan
 Yet another introduction to Generative Adversarial Networks with MNIST.
 GAN's are a special type of network that is able to learn to model a
 distribution, which can be simple things like a normal or complicated
