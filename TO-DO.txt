@@ -1,1 +1,3 @@
 fix saving and loading of the model, for organization (and save weights on cpu)
+
+add cmd line arguments to modify hyper parameters
