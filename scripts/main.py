@@ -1,7 +1,6 @@
 import argparse
-import config
 import scripts.dataset as D
-import scripts.model as M
+import scripts.models as M
 
 def extract_cmd_arguments():
     #build parser object
@@ -19,6 +18,11 @@ def extract_cmd_arguments():
         '--epochs', type=int,
         default=100,
         help='number of epochs for training'
+    )
+    parser.add_argument(
+        '--lr', type=int,
+        default=1e-4,
+        help='learning rate'
     )
     #extract and return as dictionary
     return vars(parser.parse_args())
