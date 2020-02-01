@@ -81,6 +81,9 @@ class GAN(nn.Module):
             output_msg += 'd_f {:.3e} ~ '.format(avg_d_fake_loss)
             print(output_msg)
 
+    def load(self):
+        self.generator.load_state_dict(torch.load('weights/generator.pt', map_location=torch.device('cpu')))
+
 # Our Discriminator class
 class Discriminator(nn.Module):
     def __init__(self):
